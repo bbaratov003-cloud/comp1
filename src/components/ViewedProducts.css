@@ -1,0 +1,197 @@
+/* src/components/ViewedProducts.css */
+.viewed-section {
+  margin: 40px 0;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode */
+body.dark-mode .viewed-section {
+  background: #1a2332;
+  border: 1px solid #2d3a4e;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body.dark-mode .section-header {
+  border-bottom-color: #2d3a4e;
+}
+
+/* FAQAT "Siz ko'rgan mahsulotlar" YOZUVINI OQ RANG QILISH */
+.section-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Dark mode da faqat shu h2 ni oq rang qilamiz */
+body.dark-mode .section-header h2 {
+  color: #ffffff !important;
+}
+
+.viewed-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+.viewed-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.viewed-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+body.dark-mode .viewed-scroll::-webkit-scrollbar-track {
+  background: #2d3a4e;
+}
+
+.viewed-scroll::-webkit-scrollbar-thumb {
+  background: #ff6b00;
+  border-radius: 10px;
+}
+
+.viewed-card {
+  min-width: 160px;
+  max-width: 160px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+body.dark-mode .viewed-card {
+  background: #0f172a;
+  border: 1px solid #2d3a4e;
+}
+
+.viewed-card:hover {
+  background: #fff5eb;
+  transform: translateY(-3px);
+}
+
+body.dark-mode .viewed-card:hover {
+  background: #1a2332;
+  border-color: #ff6b00;
+}
+
+.viewed-image {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.dark-mode .viewed-image {
+  background: #2d3a4e;
+}
+
+.viewed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.viewed-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.viewed-info {
+  text-align: center;
+}
+
+.viewed-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #1e293b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.dark-mode .viewed-name {
+  color: #e2e8f0;
+}
+
+.viewed-price {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ff6b00;
+  margin-bottom: 6px;
+}
+
+.viewed-cart {
+  background: #ff6b00;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.2s;
+}
+
+.viewed-cart:hover {
+  background: #e55a00;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .viewed-card {
+    min-width: 130px;
+    max-width: 130px;
+    padding: 10px;
+  }
+  
+  .viewed-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .viewed-emoji {
+    font-size: 1.6rem;
+  }
+  
+  .viewed-name {
+    font-size: 0.7rem;
+  }
+  
+  .viewed-price {
+    font-size: 0.65rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1rem;
+  }
+}

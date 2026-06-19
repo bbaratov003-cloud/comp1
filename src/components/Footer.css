@@ -1,0 +1,126 @@
+/* src/components/Footer.css */
+.footer {
+  background: linear-gradient(135deg, #0a2b3e 0%, #0a1a2a 100%);
+  color: #e2e8f0;
+  margin-top: 60px;
+  padding: 48px 0 24px;
+  transition: all 0.3s ease;
+}
+
+.footer.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-rocket {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.footer-logo h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ff6b00;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer-logo p {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #ff6b00;
+}
+
+.footer-col p {
+  margin: 8px 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  background: #ff6b00;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}

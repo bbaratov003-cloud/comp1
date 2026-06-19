@@ -1,0 +1,352 @@
+/* src/components/Header.css */
+.header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.header.dark {
+  background: #1e293b;
+}
+
+.top-bar {
+  background: linear-gradient(135deg, #0a2b3e 0%, #1a4a6f 100%);
+  color: white;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header.dark .top-bar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.contacts {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-switch button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.lang-switch button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.lang-switch button.active {
+  background: #ff6b00;
+  color: white;
+}
+
+.dark-mode-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.dark-mode-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+.main-header {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rocket-icon {
+  font-size: 2.2rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.star-icon {
+  font-size: 1rem;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  color: #ffd700;
+  animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-main {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1a4a6f 0%, #ff6b00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.header.dark .logo-main {
+  background: linear-gradient(135deg, #ff6b00 0%, #ffaa33 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.logo-sub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.header.dark .logo-sub {
+  color: #94a3b8;
+}
+
+/* Qidiruv */
+.search-wrapper {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px 12px 48px;
+  border: 2px solid #e2e8f0;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  background: white;
+}
+
+.header.dark .search-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+/* Savatcha */
+.cart-btn {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-btn:hover {
+  background: #e55a00;
+  transform: scale(1.02);
+}
+
+.cart-badge {
+  background: white;
+  color: #ff6b00;
+  padding: 2px 8px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-right {
+    justify-content: center;
+  }
+  
+  .main-header {
+    flex-direction: column;
+  }
+  
+  .search-wrapper {
+    max-width: 100%;
+    width: 100%;
+    order: 3;
+  }
+  
+  .logo {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .contacts {
+    justify-content: center;
+  }
+}
+/* Qidiruv qismi stillari */
+.search-wrapper {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px 12px 48px;
+  border: 2px solid #e2e8f0;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.search-btn {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 60px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.search-btn:hover {
+  background: #e55a00;
+}
+
+.search-clear {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #94a3b8;
+  z-index: 2;
+}
+
+.search-clear:hover {
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .search-clear {
+    right: 80px;
+  }
+}

@@ -1,0 +1,116 @@
+/* src/admin/CategoryManager.css */
+.category-manager {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.btn-add-category {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.category-form {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.category-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.icon-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.icon-option {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.icon-option.active {
+  border-color: #ff6b00;
+  background: #fff5eb;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.cancel {
+  background: #e2e8f0;
+  border: none;
+}
+
+.submit {
+  background: #ff6b00;
+  color: white;
+  border: none;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 16px;
+}
+
+.category-icon {
+  font-size: 2rem;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-id {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.delete-category {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
